@@ -35,7 +35,7 @@ echo "Preforming Port Test via curl command"
 for ITEM in "${COMPUTERLIST[@]}"
 do
  	echo "Curling $PORT on Target Server: $ITEM"
-       	curl $ITEM:8080
+       	curl $ITEM:$PORT
 done
 
 echo "End of Curl Script"
