@@ -20,7 +20,7 @@ else
 	########################################################################################
 	# Array was detected: Forcing all Parameter into First Variable (Minus Last Parameter) #
 	########################################################################################
-	arg1=$1; #shift
+	arg1=$1;
 	COMPUTERLIST=( "$@" )
 	###############################################
 	# Forcing Last Parameter into Second Variable #
@@ -35,7 +35,7 @@ echo "Preforming Port Test via curl command"
 for ITEM in "${COMPUTERLIST[@]}"
 do
  	echo "Curling $PORT on Target Server: $ITEM"
-       	# curl $ITEM:8080
+       	curl $ITEM:8080
 done
 
 echo "End of Curl Script"
